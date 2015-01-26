@@ -1,0 +1,18 @@
+<template name="articleTable">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each articles}}
+        {{> articleRow}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>

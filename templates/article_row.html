@@ -1,0 +1,8 @@
+<template name="articleRow">
+  <tr>
+    <td>{{title}}</td>
+    <td><a href="{{pathFor 'articleShow' _id=this._id.toHexString}}">Show</a></td>
+    <td><a href="{{pathFor 'articleEdit' _id=this._id.toHexString}}">Edit</a></td>
+    <td><a href="#" class="delete">Delete</a></td>
+  </tr>
+</template>
