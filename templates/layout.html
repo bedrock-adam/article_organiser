@@ -1,11 +1,5 @@
 <template name="layout">
-  <header>
-    <nav class="navbar navbar-inverse">
-      <ul class="nav navbar-nav">
-        <li><a href="{{pathFor 'articleIndex'}}">Articles</a></li>
-      </ul>
-    </nav>
-  </header>
+  {{> header }}
 
   <div class="container">
     {{> yield}}

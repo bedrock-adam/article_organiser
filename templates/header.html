@@ -1,0 +1,12 @@
+<template name="header">
+  <header>
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="{{pathFor 'articleIndex'}}">Articles</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{> loginButtons}}
+      </ul>
+    </nav>
+  </header>
+</template>

@@ -1,5 +1,3 @@
-Articles = new Mongo.Collection("articles");
-
 if (Meteor.isClient) {
   Template.articleRow.events({
     'click .delete': function(event) {

@@ -2,7 +2,15 @@
   <tr>
     <td>{{title}}</td>
     <td><a href="{{pathFor 'articleShow'}}">Show</a></td>
-    <td><a href="{{pathFor 'articleEdit'}}">Edit</a></td>
-    <td><a href="#" class="delete">Delete</a></td>
+    <td>
+      {{#if currentUser}}
+        <a href="{{pathFor 'articleEdit'}}">Edit</a>
+      {{/if}}
+    </td>
+    <td>
+      {{#if currentUser}}
+        <a href="#" class="delete">Delete</a>
+      {{/if}}
+    </td>
   </tr>
 </template>

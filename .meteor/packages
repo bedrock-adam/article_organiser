@@ -9,3 +9,5 @@ insecure
 iron:router
 mizzao:bootstrap-3
 sacha:spin
+ian:accounts-ui-bootstrap-3
+accounts-password
