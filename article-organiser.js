@@ -14,16 +14,17 @@ if (Meteor.isClient) {
   });
 
   Template.articleForm.events({
-    "submit .new": function(event) {
-      var title = event.target.title.value;
-      var content = event.target.content.value;
+    "submit form": function(e) {
+      e.preventDefault();
 
-      Articles.insert({ title: title, content: content });
+      var article = {
+        title: $(e.target).find('[name=title]').val(),
+        content: $(e.target).find('[name=content]').val()
+      };
 
-      event.target.title.value = "";
-      event.target.content.value = "";
+      Articles.insert(article);
 
-      return false;
+      Router.go('articleIndex');
     }
   });
 }
