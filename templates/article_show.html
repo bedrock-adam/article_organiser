@@ -4,6 +4,9 @@
   <p>{{content}}</p>
 
   <br>
-  <a href="{{pathFor 'articleEdit'}}">Edit</a> |
-  <a href="{{pathFor 'articleIndex'}}">Index</a>
+
+  {{#if currentUser}}
+    <a href="{{pathFor 'articleEdit'}}">Edit</a>
+  {{/if}}
+  <a href="{{pathFor 'articleIndex'}}">Back</a>
 </template>
