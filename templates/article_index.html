@@ -1,9 +1,17 @@
 <template name="articleIndex">
+  {{#unless currentUser}}
+    <div class="alert alert-info" role="alert">
+      Please <strong>sign up</strong> to create, edit and delete articles
+    </div>
+  {{/unless}}
+
   <h1>Article List</h1>
 
   {{> articleTable }}
 
   <br>
 
-  <a href="{{pathFor 'articleNew'}}">New Article</a>
+  {{#if currentUser}}
+    <a href="{{pathFor 'articleNew'}}">New Article</a>
+  {{/if}}
 </template>

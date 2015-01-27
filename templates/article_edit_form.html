@@ -1,4 +1,4 @@
-<template name="articleForm">
+<template name="articleEditForm">
   <form>
     <div class="form-group">
       <label for="title">Title</label>
@@ -10,7 +10,7 @@
       <textarea id="content" class="form-control" name="content">{{content}}</textarea>
     </div>
 
-    <input type="submit" value="Submit" class="btn btn-primary">
-    <a href="{{pathFor 'articleIndex'}}" class="btn">Cancel</a>
+    <input type="submit" value="Update" class="btn btn-primary">
+    <a href="{{pathFor 'articleShow'}}" class="btn">Cancel</a>
   </form>
 </template>
